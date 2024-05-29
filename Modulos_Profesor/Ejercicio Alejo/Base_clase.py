@@ -51,7 +51,7 @@ partipantes = {"1095824299":
 }
 
 
-def menu ( partipantes,op):
+def menu ( partipantes):
     menu = ( "1 Para Registrar", "2 Para ingresas posicion", "3. Para salir ")
 
     while True:
