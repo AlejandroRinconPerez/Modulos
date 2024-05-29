@@ -5,6 +5,8 @@ from Data import*
 menu = ( "1 Para Registrar", "2 Para ingresas posicion", "3. Para ver posiciones", "4. Para salir ")
 
 def menu ( ):
+    menu = ( "1 Para Registrar", "2 Para ingresas posicion", "3. Para ver posiciones", "4. Para salir ")
+
     for i in menu:
         print(i)
     op = input(' Elija la opcion--> ')  
