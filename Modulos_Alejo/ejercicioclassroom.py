@@ -44,14 +44,34 @@ def ingresa_posicio(data):
      else:
         usuario["posicion"] = input( "ingrese su puesto en numero--> ")
         data[cedula] = usuario  
+
+def ranking (data):
+    print("-------------------------------------------------------")
+    op = input("Desea saber su posicion ?  1.  SI  2.  NO"  )
+    if op == '1':
+        valores_ordenados = sorted(data.items().valor())
+        print("Ranking-->:", valores_ordenados)
+
+    else:
+        print( "Opcion no valida")
+
+        
+        
+        
+        
+        
+
+        
+        
+        
         
 
 partipantes = {"1095824299":
-                            {"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":100,  "Departamenbto":'santander' }
+                            {"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":[100],  "Departamenbto":'santander' }
 }
 
 
-menu = ( "1 Para Registrar", "2 Para ingresas posicion", "3. Para salir ")
+menu = ( "1 Para Registrar", "2 Para ingresas posicion", "3. Para ver posiciones", "4. Para salir ")
 
 while True:
     for i in menu:
@@ -61,7 +81,11 @@ while True:
         Registro_Participantes(partipantes)
     elif op == '2':
         ingresa_posicio(partipantes)
+
     elif op == '3':
+        ranking(partipantes)
+
+    elif op == '4':
         print("------Salir del sistema-------")
         break 
 
