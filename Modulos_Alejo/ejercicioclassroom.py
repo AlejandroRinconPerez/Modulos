@@ -1,3 +1,9 @@
+deportes = {
+    "atletismo": {
+        "1": {"Nombre": "Juan", "tel": 3221122222, "doc": "1545454"},
+        "1": {"Nombre": "Juan", "tel": 3221122222, "doc": "1545454"},
+    }
+}
 #La gobernación de Santander están organizando un evento deportivo en el cual se estarán organizando tres carreras:
 #atletismo
 #ciclismo
@@ -43,7 +49,6 @@ def ingresa_posicio(data):
     
      print("-------------------------------------------------------")
      usuario = {}
-     usuario2 ={}
      cedula = input("Ingrese la cedula del participante--> ")
      if data.get( cedula, None ) == None:
         print( "usuario no existe debe registrarlo ")
@@ -67,8 +72,8 @@ def ingresa_posicio(data):
         usuario = int (input( "ingrese su puesto en numero--> "))
         data[cedula]["posicion"] = usuario  
         
-def obtener_clave(data):
-    return data["posicion"]
+
+#def orden ()
 
 
 def ranking (data):
