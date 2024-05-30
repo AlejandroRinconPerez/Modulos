@@ -45,6 +45,10 @@ def ingresa_posicio(data):
      if data.get( cedula, None ) == None:
         print( "usuario no existe debe registrarlo ")
      else:
+        menu_deporte = ( "1. Para ciclimo", "2. Para Atletismo", "3 Para patinaje" )
+        
+        
+        
         usuario = input( "ingrese su puesto en numero--> ")
         data[cedula]["posicion"] = usuario  
         
