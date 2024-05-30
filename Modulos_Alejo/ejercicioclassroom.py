@@ -14,6 +14,8 @@
 #Puede tener menús y submenús tantos como se requiera siempre y cuando sea ordenado y entendible. Para finalizar la aplicación se debe pedir confirmación
 #Tener una estructura organizada   a nivel de código con módulos y funciones.
 
+
+
 def Registro_Participantes(data):
     print("-------------------------------------------------------")
     usuario = {}
@@ -65,70 +67,60 @@ def ingresa_posicio(data):
         usuario = int (input( "ingrese su puesto en numero--> "))
         data[cedula]["posicion"] = usuario  
         
-        
+def obtener_clave(data):
+    return data["posicion"]
 
 
 def ranking (data):
-    
     print("-------------------------------------------------------")
-    op = input("Desea saber su posicion ?  1.  SI  2.  NO"  )
+    op = input("Desea saber su posicion ?  1.  SI  2.  NO")
     if op == '1':
         for llave, valor in data.items():
-            if valor['Carrera']=='atletismo':
-                if  valor['posicion']== 1:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 2:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 3:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 4:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 5:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-            if valor['Carrera']=='Ciclismo':
-                if  valor['posicion']== 1:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 2:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 3:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 4:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 5:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-            if valor['Carrera']=='natacion':
-                if  valor['posicion']== 1:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 2:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 3:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 4:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
-                if  valor['posicion']== 5:
-                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 1:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+        for llave, valor in data.items():
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 2:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+        for llave, valor in data.items():
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 3:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+        for llave, valor in data.items():
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 4:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+        for llave, valor in data.items():
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 5:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
                 
+        
+               
     else:
-        print( "Opcion no valida")
+       print( "Opcion no valida")
         
 
-partipantes = {"1095824299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":1,  "Departamento":'santander' },
-               "1095827899":{"Nombre": "Alejandro", "Edad":29, "Carrera": "ciclimo ","posicion":5,  "Departamento":'santander' },
-               "10958782499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":2,  "Departamento":'santander' },
-               "10957899":{"Nombre": "Alejandro", "Edad":29, "Carrera": "natacion ","posicion":3,  "Departamento":'santander' },
-               "1095824299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":1,  "Departamento":'santander' },
-               "1095878299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "ciclismo ","posicion":5,  "Departamento":'santander' },
-               "10957882499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":2,  "Departamento":'santander' },
-               "109599":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":3,  "Departamento":'santander' },
-               "1095824251299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "cisclimo ","posicion":1,  "Departamento":'santander' },
-               "10958698299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":5,  "Departamento":'santander' },
-               "10958882499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":2,  "Departamento":'santander' },
-               "10959788879":{"Nombre": "Alejandro", "Edad":29, "Carrera": "natacion ","posicion":3,  "Departamento":'santander' }
+
+partipantes = {"1095824299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":5,  "Departamento":'santander' },
+               "1095827899":{"Nombre": "Alejandro", "Edad":29, "Carrera": "ciclimo","posicion":5,  "Departamento":'santander' },
+               "10958782499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":3,  "Departamento":'santander' },
+               "10957899":{"Nombre": "Alejandro", "Edad":29, "Carrera": "natacion","posicion":3,  "Departamento":'santander' },
+               "1095824299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":1,  "Departamento":'santander' },
+               "1095878299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "ciclismo","posicion":5,  "Departamento":'santander' },
+               "10957882499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":2,  "Departamento":'santander' },
+               "109599":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":3,  "Departamento":'santander' },
+               "1095824251299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "cisclimo","posicion":1,  "Departamento":'santander' },
+               "10958698299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":5,  "Departamento":'santander' },
+               "10958882499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":4,  "Departamento":'santander' },
+               "10959788879":{"Nombre": "Alejandro", "Edad":29, "Carrera": "natacion","posicion":3,  "Departamento":'santander' }
 }
 
+#partipantes_ordenados = sorted(partipantes, key=obtener_clave)
 
 menu = ( "1.Para Registrar", "2.Para ingresas posicion", "3.Para ver posiciones", "4.Para salir ")
-
+#print(partipantes_ordenados)
 
 while True:
     for i in menu:
