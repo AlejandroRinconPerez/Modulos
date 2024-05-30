@@ -49,48 +49,86 @@ def ingresa_posicio(data):
         menu_deporte = ( "1. Para ciclimo", "2. Para Atletismo", "3 Para patinaje" )
         val = input( " ingrese la opcion de su deporte--> ")
         if val == 1:
-            usuario["Carrera"] ="Ciclismo"
+            usuario["Carrera"] ="ciclismo"
             usuario = input( "ingrese su puesto en numero--> ")
             data[cedula]["posicion"] = usuario
             
         elif val == 2:
-            usuario["Carrera"] ="Atletismo"
+            usuario["Carrera"] ="atletismo"
             usuario = input( "ingrese su puesto en numero--> ")
             data[cedula]["posicion"] = usuario  
         elif val == 3:
-            usuario["Carrera"] ="Patinaje"
+            usuario["Carrera"] ="patinaje"
             usuario = input( "ingrese su puesto en numero--> ")
             data[cedula]["posicion"] = usuario  
             
-        
-        
-        
-        usuario = input( "ingrese su puesto en numero--> ")
+        usuario = int (input( "ingrese su puesto en numero--> "))
         data[cedula]["posicion"] = usuario  
         
         
-        
-        
+
 
 def ranking (data):
+    
     print("-------------------------------------------------------")
     op = input("Desea saber su posicion ?  1.  SI  2.  NO"  )
     if op == '1':
-        valores_ordenados = sorted(data.items().valor())
-        print("Ranking-->:", valores_ordenados)
-
+        for llave, valor in data.items():
+            if valor['Carrera']=='atletismo':
+                if  valor['posicion']== 1:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 2:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 3:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 4:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 5:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+            if valor['Carrera']=='Ciclismo':
+                if  valor['posicion']== 1:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 2:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 3:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 4:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 5:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+            if valor['Carrera']=='natacion':
+                if  valor['posicion']== 1:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 2:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 3:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 4:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                if  valor['posicion']== 5:
+                    print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                
     else:
         print( "Opcion no valida")
         
-        
 
-partipantes = {"1095824299":
-                            {"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":100,  "Departamenbto":'santander' }
+partipantes = {"1095824299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":1,  "Departamento":'santander' },
+               "1095827899":{"Nombre": "Alejandro", "Edad":29, "Carrera": "ciclimo ","posicion":5,  "Departamento":'santander' },
+               "10958782499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":2,  "Departamento":'santander' },
+               "10957899":{"Nombre": "Alejandro", "Edad":29, "Carrera": "natacion ","posicion":3,  "Departamento":'santander' },
+               "1095824299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":1,  "Departamento":'santander' },
+               "1095878299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "ciclismo ","posicion":5,  "Departamento":'santander' },
+               "10957882499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":2,  "Departamento":'santander' },
+               "109599":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":3,  "Departamento":'santander' },
+               "1095824251299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "cisclimo ","posicion":1,  "Departamento":'santander' },
+               "10958698299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":5,  "Departamento":'santander' },
+               "10958882499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":2,  "Departamento":'santander' },
+               "10959788879":{"Nombre": "Alejandro", "Edad":29, "Carrera": "natacion ","posicion":3,  "Departamento":'santander' }
 }
 
 
-menu = ( "1 Para Registrar", "2 Para ingresas posicion", "3. Para ver posiciones", "4. Para salir ")
-print ( partipantes.items())
+menu = ( "1.Para Registrar", "2.Para ingresas posicion", "3.Para ver posiciones", "4.Para salir ")
+
 
 while True:
     for i in menu:
@@ -99,10 +137,11 @@ while True:
     if op == '1':
         Registro_Participantes(partipantes)
     elif op == '2':
+    
         ingresa_posicio(partipantes)
 
     elif op == '3':
-        ranking(partipantes)
+       ranking(partipantes)
 
     elif op == '4':
         print("------Salir del sistema-------")
