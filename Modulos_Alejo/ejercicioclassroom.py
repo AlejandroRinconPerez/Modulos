@@ -96,6 +96,8 @@ def ranking (data):
             if valor["Carrera"] == "atletismo" and posicion == 5:
                 print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
                 
+    
+                
         
                
     else:
