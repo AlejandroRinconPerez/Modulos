@@ -19,7 +19,7 @@ def Registro_Participantes(data):
     usuario = {}
     edad = int(input( " ingrese su edad--> "))
     departamento = input( " ingrese su deparetamento--> ")
-    departamento.lower()
+    departamento =  departamento.lower()
     if edad >= 18 and departamento == 'santander':
         cedula = input( " ingrese la cedula--> ")
         if data.get( cedula, None) == None:
@@ -27,23 +27,30 @@ def Registro_Participantes(data):
             print(" Participante no  registrado")
             print( 'ingrese los datos')
             usuario["Nombre"] = input( " ingrese el nombre--> ")
-            usuario["Carrera"] = input( " Competencia-->")
+            #usuario["Carrera"] = input( " Competencia-->")
             usuario['Edad'] = edad
             usuario['Departamento'] = departamento
             data[cedula] = usuario
             print("-------------------------------------------------------")
+        else:
+            print("Usuario registrado")
     else:
         print( 'No puede participar')
         
 def ingresa_posicio(data):
+    
      print("-------------------------------------------------------")
      usuario = {}
      cedula = input("Ingrese la cedula del participante--> ")
      if data.get( cedula, None ) == None:
         print( "usuario no existe debe registrarlo ")
      else:
-        usuario["posicion"] = input( "ingrese su puesto en numero--> ")
-        data[cedula] = usuario  
+        usuario = input( "ingrese su puesto en numero--> ")
+        data[cedula]["posicion"] = usuario  
+        
+        
+        
+        
 
 def ranking (data):
     print("-------------------------------------------------------")
@@ -54,24 +61,16 @@ def ranking (data):
 
     else:
         print( "Opcion no valida")
-
-        
-        
-        
-        
-        
-
-        
-        
         
         
 
 partipantes = {"1095824299":
-                            {"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":[100],  "Departamenbto":'santander' }
+                            {"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":100,  "Departamenbto":'santander' }
 }
 
 
 menu = ( "1 Para Registrar", "2 Para ingresas posicion", "3. Para ver posiciones", "4. Para salir ")
+print ( partipantes.items())
 
 while True:
     for i in menu:
@@ -88,6 +87,11 @@ while True:
     elif op == '4':
         print("------Salir del sistema-------")
         break 
+    elif op == '5':
+        print("Ver lista")
+        print(partipantes.items())
+        
+
 
     
     

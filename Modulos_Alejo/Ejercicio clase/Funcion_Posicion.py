@@ -9,4 +9,7 @@ def ingresa_posicio(data):
         
         
         
+        
+        
+        
         data[cedula] = usuario 
