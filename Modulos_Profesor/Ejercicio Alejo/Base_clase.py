@@ -34,7 +34,7 @@ def Registro_Participantes(data):
             print("-------------------------------------------------------")
     else:
         print( 'No puede participar')
-        
+          
 def ingresa_posicio(data):
      print("-------------------------------------------------------")
      usuario = {}
