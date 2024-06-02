@@ -10,9 +10,12 @@ def Registro_de_Datos (data):
     
     if Plan_Utilizado  not in data:
         data[Plan_Utilizado]={}
-    Utilizado["Nombre"] = nombre
-    Utilizado["Edad"] = Edad
-    data[Plan_Utilizado][Codigo_de_usuario] = Utilizado
+        Utilizado["Nombre"] = nombre
+        Utilizado["Edad"] = Edad
+        data[Plan_Utilizado][Codigo_de_usuario] = Utilizado
+    else:
+        print("Datos ya registrados anterior mente ")
+    
     
     
      
