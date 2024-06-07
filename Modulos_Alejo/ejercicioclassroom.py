@@ -1,3 +1,9 @@
+deportes = {
+    "atletismo": {
+        "1": {"Nombre": "Juan", "tel": 3221122222, "doc": "1545454"},
+        "1": {"Nombre": "Juan", "tel": 3221122222, "doc": "1545454"},
+    }
+}
 #La gobernación de Santander están organizando un evento deportivo en el cual se estarán organizando tres carreras:
 #atletismo
 #ciclismo
@@ -14,12 +20,14 @@
 #Puede tener menús y submenús tantos como se requiera siempre y cuando sea ordenado y entendible. Para finalizar la aplicación se debe pedir confirmación
 #Tener una estructura organizada   a nivel de código con módulos y funciones.
 
+
+
 def Registro_Participantes(data):
     print("-------------------------------------------------------")
     usuario = {}
     edad = int(input( " ingrese su edad--> "))
     departamento = input( " ingrese su deparetamento--> ")
-    departamento.lower()
+    departamento =  departamento.lower()
     if edad >= 18 and departamento == 'santander':
         cedula = input( " ingrese la cedula--> ")
         if data.get( cedula, None) == None:
@@ -27,31 +35,99 @@ def Registro_Participantes(data):
             print(" Participante no  registrado")
             print( 'ingrese los datos')
             usuario["Nombre"] = input( " ingrese el nombre--> ")
-            usuario["Carrera"] = input( " Competencia-->")
+            #usuario["Carrera"] = input( " Competencia-->")
             usuario['Edad'] = edad
             usuario['Departamento'] = departamento
             data[cedula] = usuario
             print("-------------------------------------------------------")
+        else:
+            print("Usuario registrado")
     else:
         print( 'No puede participar')
         
 def ingresa_posicio(data):
+    
      print("-------------------------------------------------------")
      usuario = {}
      cedula = input("Ingrese la cedula del participante--> ")
      if data.get( cedula, None ) == None:
         print( "usuario no existe debe registrarlo ")
      else:
-        usuario["posicion"] = input( "ingrese su puesto en numero--> ")
-        data[cedula] = usuario  
+        menu_deporte = ( "1. Para ciclimo", "2. Para Atletismo", "3 Para patinaje" )
+        val = input( " ingrese la opcion de su deporte--> ")
+        if val == 1:
+            usuario["Carrera"] ="ciclismo"
+            usuario = input( "ingrese su puesto en numero--> ")
+            data[cedula]["posicion"] = usuario
+            
+        elif val == 2:
+            usuario["Carrera"] ="atletismo"
+            usuario = input( "ingrese su puesto en numero--> ")
+            data[cedula]["posicion"] = usuario  
+        elif val == 3:
+            usuario["Carrera"] ="patinaje"
+            usuario = input( "ingrese su puesto en numero--> ")
+            data[cedula]["posicion"] = usuario  
+            
+        usuario = int (input( "ingrese su puesto en numero--> "))
+        data[cedula]["posicion"] = usuario  
         
 
-partipantes = {"1095824299":
-                            {"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo ","posicion":100,  "Departamenbto":'santander' }
+#def orden ()
+
+
+def ranking (data):
+    print("-------------------------------------------------------")
+    op = input("Desea saber su posicion ?  1.  SI  2.  NO")
+    if op == '1':
+        for llave, valor in data.items():
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 1:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+        for llave, valor in data.items():
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 2:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+        for llave, valor in data.items():
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 3:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+        for llave, valor in data.items():
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 4:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+        for llave, valor in data.items():
+            posicion = valor.get("posicion")
+            if valor["Carrera"] == "atletismo" and posicion == 5:
+                print(f"cedula: {llave} - Carrera: {valor['Carrera']} - posicion: {valor['posicion']}")
+                
+    
+                
+        
+               
+    else:
+       print( "Opcion no valida")
+        
+
+
+partipantes = {"1095824299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":5,  "Departamento":'santander' },
+               "1095827899":{"Nombre": "Alejandro", "Edad":29, "Carrera": "ciclimo","posicion":5,  "Departamento":'santander' },
+               "10958782499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":3,  "Departamento":'santander' },
+               "10957899":{"Nombre": "Alejandro", "Edad":29, "Carrera": "natacion","posicion":3,  "Departamento":'santander' },
+               "1095824299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":1,  "Departamento":'santander' },
+               "1095878299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "ciclismo","posicion":5,  "Departamento":'santander' },
+               "10957882499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":2,  "Departamento":'santander' },
+               "109599":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":3,  "Departamento":'santander' },
+               "1095824251299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "cisclimo","posicion":1,  "Departamento":'santander' },
+               "10958698299":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":5,  "Departamento":'santander' },
+               "10958882499":{"Nombre": "Alejandro", "Edad":29, "Carrera": "atletismo","posicion":4,  "Departamento":'santander' },
+               "10959788879":{"Nombre": "Alejandro", "Edad":29, "Carrera": "natacion","posicion":3,  "Departamento":'santander' }
 }
 
+#partipantes_ordenados = sorted(partipantes, key=obtener_clave)
 
-menu = ( "1 Para Registrar", "2 Para ingresas posicion", "3. Para salir ")
+menu = ( "1.Para Registrar", "2.Para ingresas posicion", "3.Para ver posiciones", "4.Para salir ")
+#print(partipantes_ordenados)
 
 while True:
     for i in menu:
@@ -60,10 +136,20 @@ while True:
     if op == '1':
         Registro_Participantes(partipantes)
     elif op == '2':
+    
         ingresa_posicio(partipantes)
+
     elif op == '3':
+       ranking(partipantes)
+
+    elif op == '4':
         print("------Salir del sistema-------")
         break 
+    elif op == '5':
+        print("Ver lista")
+        print(partipantes.items())
+        
+
 
     
     
