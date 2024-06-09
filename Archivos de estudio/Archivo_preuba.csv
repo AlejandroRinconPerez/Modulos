@@ -1,7 +1,0 @@
-
-datos = [
-    ['Nombre', 'Edad', 'Ciudad'],
-    ['Ana', 22, 'Madrid'],
-    ['Luis', 34, 'Barcelona'],
-    ['Marta', 28, 'Valencia']
-

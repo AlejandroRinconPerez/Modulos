@@ -1,0 +1,99 @@
+[
+    {
+        "1095824299": {
+            "Nombre": "Alejandro",
+            "Apellido": "Rincon",
+            "Telefono": "3178876402",
+            "Cargo": "Director",
+            "fecha": {
+                "07/06/2024": {
+                    "Entrada": "7:30",
+                    "Salida": "10:00"
+                }
+            },
+            "Estado": "Retirado"
+        }
+    },
+    {
+        "2030196": {
+            "Nombre": "Joaquin",
+            "Apellido": "Rincon",
+            "Telefono": "3123502846",
+            "Cargo": "Quimico",
+            "fecha": {
+                "07/06/2024": {
+                    "Entrada": "8:00",
+                    "Salida": "10:00"
+                }
+            }
+        }
+    },
+    {
+        "12345": {
+            "Nombre": "Carlos",
+            "Apellido": "Rincon",
+            "Telefono": "32123433",
+            "Cargo": "medico",
+            "fecha": {
+                "07/06/2024": {
+                    "Entrada": "8:00",
+                    "Salida": "10:00"
+                }
+            }
+        }
+    },
+    {
+        "63466114": {
+            "Nombre": "Andrea",
+            "Apellido": "Perez",
+            "Telefono": "39028088",
+            "Cargo": "Ventas",
+            "fecha": {
+                "07/06/2024": {
+                    "Entrada": "8:00",
+                    "Salida": "10:00"
+                }
+            }
+        }
+    },
+    {
+        "3344550": {
+            "Nombre": "Elena",
+            "Apellido": "Rincon",
+            "Telefono": "3158888",
+            "Cargo": "Admin ",
+            "fecha": {
+                "07/06/2024": {
+                    "Entrada": "10:20"
+                }
+            },
+            "Estado": "contratado"
+        },
+        "2020196": {
+            "Nombre": "Alejo Conejo ",
+            "Apellido": "petro no",
+            "Telefono": "222",
+            "Cargo": "Presidente"
+        }
+    },
+    {
+        "3344550": {
+            "Nombre": "Elena",
+            "Apellido": "Rincon",
+            "Telefono": "3158888",
+            "Cargo": "Admin ",
+            "fecha": {
+                "07/06/2024": {
+                    "Entrada": "10:20"
+                }
+            },
+            "Estado": "contratado"
+        },
+        "2020196": {
+            "Nombre": "Alejo Conejo ",
+            "Apellido": "petro no",
+            "Telefono": "222",
+            "Cargo": "Presidente"
+        }
+    }
+]

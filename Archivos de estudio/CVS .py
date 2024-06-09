@@ -13,10 +13,6 @@ import json
 def Save_at_json (diccionarios):
     global Route
     Route = "lear_about.json"
-    
-    
-    
-    
 
 Dict = {}
 elementos = {}
